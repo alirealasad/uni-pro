@@ -40,6 +40,9 @@ export class FormComponent implements OnInit {
   onSubmit() {
       this.submitted = true;
 
+      console.log(this.registerForm);
+
+
       // stop here if form is invalid
       if (this.registerForm.invalid) {
           return;
@@ -47,11 +50,6 @@ export class FormComponent implements OnInit {
 
       this.router.navigate(['/confirmed'])
 
-
-
-
-
-      // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
   }
 
 }
